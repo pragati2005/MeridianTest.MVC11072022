@@ -1,0 +1,34 @@
+﻿@using Meridian.Example.MVC.Models
+
+@{
+    ViewBag.Title = "Sites Data";
+}
+<h2> Site Document </h2>
+<table>
+    <td>Site Type</td>
+</table>
+<table>
+    @foreach (var site in (IEnumerable
+  <Meridian.Example.MVC.Models.Site>
+      )ViewData["AllSites"])
+    {
+
+        <tr>
+
+            <td> @site.Id</td>
+            <td>@site.Name</td>
+            <td>@site.Code</td>
+
+            <td>
+                <a class="nav-link text-dark" asp-area="" asp-controller="Site" asp-action="AddSiteById" asp-route-id=@site.Id>
+                    <u>
+                        Edit
+                    </u>
+                </a>
+
+
+            </td>
+
+        </tr>
+    }
+</table>

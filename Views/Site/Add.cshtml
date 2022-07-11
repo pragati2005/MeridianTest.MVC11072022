@@ -1,0 +1,37 @@
+﻿@using Meridian.Example.MVC.Models
+
+@{
+    var value = (Meridian.Example.MVC.Models.Site)ViewData["Existing"];
+}
+<h2> Sites </h2>
+<form asp-controller="Site" asp-action="AddSite" method="post">
+
+    @if (@value != null)
+    {
+        <p> Edit Site : </p>
+        <label>Name : </label> <input type="text" name="Name" value=@value.Name><br />
+        <input type="hidden" name="Id" value=@value.Id><br />
+       <label>Code : </label> <input type="text" name="code" value=@value.Code><br />
+
+        <p>
+            <input type="submit" id="updateBtn" value="Update" />
+        </p>
+    }
+    else
+    {
+        <p> Add Site : </p>
+        <label>Name : </label><input type="text" name="Name" /><br />
+
+        <label>Code : </label><input type="text" name="code" /><br />
+
+
+        <p>
+
+            <input type="submit" id="saveBtn" value="save" />
+
+        </p>
+
+    }
+
+
+</form>

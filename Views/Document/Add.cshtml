@@ -1,0 +1,48 @@
+﻿@using Meridian.Example.MVC.Models
+
+@{
+    var value = (Meridian.Example.MVC.Models.DocumentType)ViewData["Existing"];
+
+}
+
+<script>
+    function saveButtonDisable() {
+        if (document.getElementById("addDocument").value === "") {
+            document.getElementById("saveBtn").disabled = true;
+        } else {
+            document.getElementById("saveBtn").disabled = false;
+        }
+    }
+
+    function editButtonDisable() {
+        if (document.getElementById("editDocument").value === "") {
+            document.getElementById("updateBtn").disabled = true;
+        } else {
+            document.getElementById("updateBtn").disabled = false;
+        }
+    }
+</script>
+<h2>  Documents</h2>
+<form asp-controller="Document" asp-action="AddDocument" method="post">
+   
+    @if (@value != null)
+    {
+        <h3> Edit Document</h3>
+        <label>Document Type : </label><input type="text" id="editDocument"  onkeyup="editButtonDisable()" name="Type" value=@value.Type><br />
+        <input type="hidden" name="Id" id="editDocument" value=@value.Id><br />
+        <p>
+            <input type="submit" id="updateBtn" value="Update" disabled/>
+        </p>
+    }
+    else
+    {
+        <h3>Add Document</h3>
+        <label>Document Type : </label><input type="text" id="addDocument" onkeyup="saveButtonDisable()" name="Type" /><br />
+        <p>
+            <input type="submit" id="saveBtn" value="save" disabled/>
+        </p>
+
+    }
+
+    
+</form>

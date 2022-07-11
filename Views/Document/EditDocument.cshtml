@@ -1,0 +1,33 @@
+﻿@using Meridian.Example.MVC.Models
+
+    @{
+    ViewBag.Title = "Documents Data";
+    }
+<h2> Edit Document </h2>
+<table>
+    <td> Document Type</td>
+    </table>
+<table>
+    @foreach (var documents in (IEnumerable
+    <Meridian.Example.MVC.Models.DocumentType>
+        )ViewData["AllDocuments"])
+        {
+
+        <tr>
+            <td> @documents.Id</td>
+            <td>@documents.Type</td>
+            
+            <td>
+                <a class="nav-link text-dark" asp-area="" asp-controller="Document" asp-action="AddDocumentById" asp-route-id=@documents.Id >
+                    <u>
+                        Edit
+                    </u>
+                </a>
+
+
+            </td>
+
+        </tr>
+        }
+</table>
+   

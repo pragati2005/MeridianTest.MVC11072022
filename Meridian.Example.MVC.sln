@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meridian.Example.MVC", "Meridian.Example.MVC.csproj", "{14EB37BB-CD4D-4679-ABD1-23400882530A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14EB37BB-CD4D-4679-ABD1-23400882530A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14EB37BB-CD4D-4679-ABD1-23400882530A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14EB37BB-CD4D-4679-ABD1-23400882530A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14EB37BB-CD4D-4679-ABD1-23400882530A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16F72524-75C4-4C33-BD57-550116B3FC65}
+	EndGlobalSection
+EndGlobal
